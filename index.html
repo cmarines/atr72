@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <script src="jquery.min.js"></script>
+  <script src="jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Uncomment the following to include cordova in your android project -->
+  <!--<script src="http://jqmdesigner.appspot.com/platforms/android/cordova.js"></script>-->
+  
+  <!-- Export JS  -->
+  <script>
+    $(document).on('pageinit', function () {
+
+      $('#hero_list li').click(function (e) {
+        var heroName = $(this).text();
+        console.log(heroName);
+        $('#hero').text(heroName);
+        var heroNum = $(this).index() + 1;
+        $(".heroImg").hide();
+        $("#hero" + heroNum).fadeIn(250);
+      });
+
+    });
+  </script>
+  <title>Check Sim</title>
+</head><!-- script finish -->
+
+<body>
+<div id="home" data-role="page" style="background: url(./res/atr72b.jpg) -100px 90px / 125% repeat repeat fixed;">
+  <div data-role="header" data-position="fixed" data-theme="a">
+    <h3>ATR 72 Checklist</h3>
+  </div>
+  <div role="main" class="ui-content">
+    <ul data-role="listview" data-inset="true" style="margin-top:0;">
+      <li data-role="list-divider" style="margin:0 0 -10px 0; font-size:16px; background:-webkit-linear-gradient(#66f,#33a); text-shadow:none; color:#fff;">Normal Checklist</li>
+    </ul>
+    <ul data-role="listview" data-inset="true" id="hero_list" style="margin:0;">
+      <li>
+        <a href="#BATTERY_START" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">BATTERY START</a>
+      </li>
+      <li>
+        <a href="#BEFORE_FIRST_FLIGHT_OF_THE_DAY" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">BEFORE FIRST FLIGHT OF THE DAY</a>
+      </li>
+	  <li>
+        <a href="#TURN_AROUND" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">TURN AROUND</a>
+      </li>
+      <li>
+        <a href="#BEFORE_ENGINE_START" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">BEFORE ENGINE START</a>
+      </li>
+      <li>
+        <a href="#ENGINE_START" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">ENGINE START</a>
+      </li>
+      <li>
+        <a href="#PUSHBACK_AND_ENGINE_START" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">PUSHBACK AND ENGINE START</a>
+      </li>
+      <li>
+        <a href="#TAXI" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">TAXI</a>
+      </li>
+      <li>
+        <a href="#BEFORE_TAKE_OFF" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">BEFORE TAKE OFF</a>
+      </li>
+      <li>
+        <a href="#AFTER_TAKE_OFF" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">AFTER TAKE OFF</a>
+      </li>
+      <li>
+        <a href="#DESCENT" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">DESCENT</a>
+      </li>
+      <li>
+        <a href="#APPROACH" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">APPROACH</a>
+      </li>
+      <li>
+        <a href="#FINAL" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">FINAL</a>
+      </li>
+      <li>
+        <a href="#AFTER_LANDING" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">AFTER LANDING</a>
+      </li>
+      <li>
+        <a href="#PARKING_CHECKLIST" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">PARKING CHECKLIST</a>
+      </li>
+      <li>
+        <a href="#SECURING" data-transition="slide">
+          <img src="./res/plane-icon.png" class="ui-li-icon">SECURING</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!--BATTERY_START page -->
+<div id="BATTERY_START" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">BATTERY START</legend>
+      <input name="checkbox-BATTERY_START-1" id="checkbox-BATTERY_START-1" type="checkbox">
+      <label for="checkbox-BATTERY_START-1">PARKING BRAKE / PRESS<span style="float:right"><font color="red">SET / CHECKED</font></span></label>
+      <input name="checkbox-BATTERY_START-2" id="checkbox-BATTERY_START-2" type="checkbox">
+      <label for="checkbox-BATTERY_START-2">BATTERY SWITCH<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BATTERY_START-3" id="checkbox-BATTERY_START-3" type="checkbox">
+      <label for="checkbox-BATTERY_START-3">MFC<span style="float:right"><font color="red">TESTED / ON</font></span></label>
+      <input name="checkbox-BATTERY_START-4" id="checkbox-BATTERY_START-4" type="checkbox">
+      <label for="checkbox-BATTERY_START-4">CIRCUIT BREAKERS<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-BATTERY_START-5" id="checkbox-BATTERY_START-5" type="checkbox">
+      <label for="checkbox-BATTERY_START-5">GUST LOCK<span style="float:right"><font color="red">ENGAGED</font></span></label>
+      <input name="checkbox-BATTERY_START-6" id="checkbox-BATTERY_START-6" type="checkbox">
+      <label for="checkbox-BATTERY_START-6">ENGINE LEVERS<span style="float:right"><font color="red">SET GI / FSO</font></span></label>
+      <input name="checkbox-BATTERY_START-7" id="checkbox-BATTERY_START-7" type="checkbox">
+      <label for="checkbox-BATTERY_START-7">LANDING GEAR<span style="float:right"><font color="red">DOWN / 3 GREEN</font></span></label>
+      <input name="checkbox-BATTERY_START-8" id="checkbox-BATTERY_START-8" type="checkbox">
+      <label for="checkbox-BATTERY_START-8">ENGINE FIRE 2<span style="float:right"><font color="red">TESTED</font></span></label>
+      <input name="checkbox-BATTERY_START-9" id="checkbox-BATTERY_START-9" type="checkbox">
+      <label for="checkbox-BATTERY_START-9">PROP BRAKE<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BATTERY_START-10" id="checkbox-BATTERY_START-10" type="checkbox">
+      <label for="checkbox-BATTERY_START-10">FUEL PUMP 2<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BATTERY_START-11" id="checkbox-BATTERY_START-11" type="checkbox">
+      <label for="checkbox-BATTERY_START-11">COM 1<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BATTERY_START-12" id="checkbox-BATTERY_START-12" type="checkbox">
+      <label for="checkbox-BATTERY_START-12">ENGINE 2 START IN H-MODE<span style="float:right"><font color="red">PERFORM</font></span></label>
+      <input name="checkbox-BATTERY_START-13" id="checkbox-BATTERY_START-13" type="checkbox">
+      <label for="checkbox-BATTERY_START-13">EMERG EXIT LIGHTS<span style="float:right"><font color="red">ARMED</font></span></label>      
+	  </fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--TURN AROUND -->
+<div id="TURN_AROUND" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">TURN AROUND</legend>
+      <input name="checkbox-TURN_AROUND-1" id="checkbox-TURN_AROUND-1" type="checkbox">
+      <label for="checkbox-TURN_AROUND-1">Securing Checks<span style="float:right"><font color="red">reverse</font></span></label>
+      <input name="checkbox-TURN_AROUND-2" id="checkbox-TURN_AROUND-2" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-2">DOCUMENTS<span style="float:right"><font color="red">CHECKED / ON BOARD</font></span></label>
+      <input name="checkbox-TURN_AROUND-3" id="checkbox-TURN_AROUND-3" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-3">EMERGENCY EQUIPMENT<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-TURN_AROUND-4" id="checkbox-TURN_AROUND-4" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-4">GEAR PINS<span style="float:right"><font color="red">STOWED</font></span></label>
+      <input name="checkbox-TURN_AROUND-5" id="checkbox-TURN_AROUND-5" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-5">Flt Data / CVR<span style="float:right"><font color="red">set / on</font></span></label>
+      <input name="checkbox-TURN_AROUND-6" id="checkbox-TURN_AROUND-6" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-6">Engine Test<span style="float:right"><font color="red">performed</font></span></label>
+      <input name="checkbox-TURN_AROUND-7" id="checkbox-TURN_AROUND-7" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-7">Trims<span style="float:right"><font color="red">checked / set</font></span></label>
+      <input name="checkbox-TURN_AROUND-8" id="checkbox-TURN_AROUND-8" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-8">Parking Brake / Press<span style="float:right"><font color="red">set / checked</font></span></label>
+      <input name="checkbox-TURN_AROUND-9" id="checkbox-TURN_AROUND-9" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-9">Engine Levers<span style="float:right"><font color="red">set GI / FSO</font></span></label>
+      <input name="checkbox-TURN_AROUND-10" id="checkbox-TURN_AROUND-10" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-10">Gust Lock<span style="float:right"><font color="red">engaged</font></span></label>
+      <input name="checkbox-TURN_AROUND-11" id="checkbox-TURN_AROUND-11" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-11">Landing Elevation<span style="float:right"><font color="red">set</font></span></label>
+      <input name="checkbox-TURN_AROUND-12" id="checkbox-TURN_AROUND-12" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-12">Anti Skid<span style="float:right"><font color="red">tested</font></span></label>
+      <input name="checkbox-TURN_AROUND-13" id="checkbox-TURN_AROUND-13" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-13">Engine Control<span style="float:right"><font color="red">set</font></span></label>
+      <input name="checkbox-TURN_AROUND-14" id="checkbox-TURN_AROUND-14" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-14">Engine Fire 1+2<span style="float:right"><font color="red">tested</font></span></label>
+      <input name="checkbox-TURN_AROUND-15" id="checkbox-TURN_AROUND-15" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-15">Prop Brake<span style="float:right"><font color="red">on</font></span></label>
+      <input name="checkbox-TURN_AROUND-16" id="checkbox-TURN_AROUND-16" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-16">Cabin Signs<span style="float:right"><font color="red">set</font></span></label>
+      <input name="checkbox-TURN_AROUND-17" id="checkbox-TURN_AROUND-17" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-17">Circuit Breakers<span style="float:right"><font color="red">checked</font></span></label>
+      <input name="checkbox-TURN_AROUND-18" id="checkbox-TURN_AROUND-18" type="checkbox">      
+	  <label for="checkbox-TURN_AROUND-18">PREFLIGHT INSPECTION<span style="float:right"><font color="red">COMPLETED</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--BEFORE ENGINE_START page -->
+<div id="BEFORE_ENGINE_START" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">BEFORE ENGINE START</legend>
+      <input name="checkbox-BEFORE_ENGINE_START-1" id="checkbox-BEFORE_ENGINE_START-1" type="checkbox">
+      <label for="checkbox-BEFORE_ENGINE_START-1">FUEL QUANTITY / FU<span style="float:right"><font color="red">___ / ___</font></span></label>
+      <input name="checkbox-BEFORE_ENGINE_START-2" id="checkbox-BEFORE_ENGINE_START-2" type="checkbox">
+      <label for="checkbox-BEFORE_ENGINE_START-2">TORQUE BUGS<span style="float:right"><font color="red">___% OBJ TORQUE</font></span></label>
+      <input name="checkbox-BEFORE_ENGINE_START-3" id="checkbox-BEFORE_ENGINE_START-3" type="checkbox">
+      <label for="checkbox-BEFORE_ENGINE_START-3">COM / NAV - EQUIPMENT<span style="float:right"><font color="red">SET FOR DEP. ___</font></span></label>
+      <input name="checkbox-BEFORE_ENGINE_START-4" id="checkbox-BEFORE_ENGINE_START-4" type="checkbox">
+      <label for="checkbox-BEFORE_ENGINE_START-4">ALTIMETERS<span style="float:right"><font color="red">___ hPa / ___ FT</font></span></label>
+      <input name="checkbox-BEFORE_ENGINE_START-5" id="checkbox-BEFORE_ENGINE_START-5" type="checkbox">
+      <label for="checkbox-BEFORE_ENGINE_START-5">NOSE WHEEL STEERING<span style="float:right"><font color="red">ON / (OFF for pushback)</font></span></label>
+      <input name="checkbox-BEFORE_ENGINE_START-6" id="checkbox-BEFORE_ENGINE_START-6" type="checkbox">
+      <label for="checkbox-BEFORE_ENGINE_START-6">SPEED MARKS/ BUG/ TRIM<span style="float:right"><font color="red">SET/___t/___COND/___°</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+
+<!--ENGINE_START page -->
+<div id="ENGINE_START" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">ENGINE START</legend>
+      <input name="checkbox-ENGINE_START-1" id="checkbox-ENGINE_START-1" type="checkbox">
+      <label for="checkbox-ENGINE_START-1">Fuel Pumps<span style="float:right"><font color="red">on</font></span></label>
+      <input name="checkbox-ENGINE_START-2" id="checkbox-ENGINE_START-2" type="checkbox">
+      <label for="checkbox-ENGINE_START-2">Beacon / Wing Light<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-ENGINE_START-3" id="checkbox-ENGINE_START-3" type="checkbox">
+      <label for="checkbox-ENGINE_START-3">PARKING BRAKE<span style="float:right"><font color="red">SET / PRESS CHECKED</font></span></label>
+      <input name="checkbox-ENGINE_START-4" id="checkbox-ENGINE_START-4" type="checkbox">
+      <label for="checkbox-ENGINE_START-4">DOORS<span style="float:right"><font color="red">CLOSED</font></span></label>
+      <input name="checkbox-ENGINE_START-5" id="checkbox-ENGINE_START-5" type="checkbox">
+      <label for="checkbox-ENGINE_START-5">White Lights<span style="float:right"><font color="red">extinguished</font></span></label>
+      <input name="checkbox-ENGINE_START-6" id="checkbox-ENGINE_START-6" type="checkbox">
+      <label for="checkbox-ENGINE_START-6">Gen 2 / Ext Pwr PB<span style="float:right"><font color="red">checked / off</font></span></label>
+      <input name="checkbox-ENGINE_START-7" id="checkbox-ENGINE_START-7" type="checkbox">
+      <label for="checkbox-ENGINE_START-7">Emerg Exit Lights<span style="float:right"><font color="red">armed</font></span></label>
+      <input name="checkbox-ENGINE_START-8" id="checkbox-ENGINE_START-8" type="checkbox">
+      <label for="checkbox-ENGINE_START-8">ENGINE(S)<span style="float:right"><font color="red">( 2 / BOTH) STARTED</font></span></label>
+      <input name="checkbox-ENGINE_START-9" id="checkbox-ENGINE_START-9" type="checkbox">
+      <label for="checkbox-ENGINE_START-9">FLAPS<span style="float:right"><font color="red">SET / INDICATING 15</font></span></label>
+      <input name="checkbox-ENGINE_START-10" id="checkbox-ENGINE_START-10" type="checkbox">
+      <label for="checkbox-ENGINE_START-10">FLAPS<span style="float:right"><font color="red">SET / INDICATING 15</font></span></label>
+      <input name="checkbox-ENGINE_START-11" id="checkbox-ENGINE_START-11" type="checkbox">
+      <label for="checkbox-ENGINE_START-11">GPU / CHOCKS<span style="float:right"><font color="red">REMOVED</font></span></label>
+      <input name="checkbox-ENGINE_START-12" id="checkbox-ENGINE_START-12" type="checkbox">
+      <label for="checkbox-ENGINE_START-12">ENGINE TEST<span style="float:right"><font color="red">PERFORMED</font></span></label>
+      <input name="checkbox-ENGINE_START-13" id="checkbox-ENGINE_START-13" type="checkbox">
+      <label for="checkbox-ENGINE_START-13">CABIN REPORT FOR TAXI<span style="float:right"><font color="red">RECEIVED</font></span></label>
+      <input name="checkbox-ENGINE_START-14" id="checkbox-ENGINE_START-14" type="checkbox">
+      <label for="checkbox-ENGINE_START-14">TAIL PROP<span style="float:right"><font color="red">ON BOARD</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--PUSHBACK_AND_ENGINE_START page -->
+<div id="PUSHBACK_AND_ENGINE_START" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">PUSHBACK AND ENGINE START</legend>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-1" id="checkbox-PUSHBACK_AND_ENGINE_START-1" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-1"> H – Mode<span style="float:right"><font color="red">started</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-2" id="checkbox-PUSHBACK_AND_ENGINE_START-2" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-2">Gen 2 / Ext Pwr PB<span style="float:right"><font color="red">checked / off</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-3" id="checkbox-PUSHBACK_AND_ENGINE_START-3" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-3">Emerg Exit Lights<span style="float:right"><font color="red">armed</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-4" id="checkbox-PUSHBACK_AND_ENGINE_START-4" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-4">Beacon / Wing Light<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-5" id="checkbox-PUSHBACK_AND_ENGINE_START-5" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-5">Fuel Pumps<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-6" id="checkbox-PUSHBACK_AND_ENGINE_START-6" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-6">DOORS<span style="float:right"><font color="red">CLOSED</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-7" id="checkbox-PUSHBACK_AND_ENGINE_START-7" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-7">GPU / CHOCKS<span style="float:right"><font color="red">REMOVED</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-8" id="checkbox-PUSHBACK_AND_ENGINE_START-8" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-8">PARKING BRAKE<span style="float:right"><font color="red">AS REQ BY GND CREW</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-9" id="checkbox-PUSHBACK_AND_ENGINE_START-9" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-9">NOSE WHEEL STEERING<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-PUSHBACK_AND_ENGINE_START-10" id="checkbox-PUSHBACK_AND_ENGINE_START-10" type="checkbox">
+      <label for="checkbox-PUSHBACK_AND_ENGINE_START-10">TAIL PROP<span style="float:right"><font color="red">ON BOARD</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--TAXI page -->
+<div id="TAXI" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">TAXI</legend>
+      <input name="checkbox-TAXI-1" id="checkbox-TAXI-1" type="checkbox">
+      <label for="checkbox-TAXI-1"> Taxi Light<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-TAXI-2" id="checkbox-TAXI-2" type="checkbox">
+      <label for="checkbox-TAXI-2">BRAKES<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-TAXI-3" id="checkbox-TAXI-3" type="checkbox">
+      <label for="checkbox-TAXI-3">ENGINES<span style="float:right"><font color="red">STARTED</font></span></label>
+      <input name="checkbox-TAXI-4" id="checkbox-TAXI-4" type="checkbox">
+      <label for="checkbox-TAXI-4">COND LEVERS<span style="float:right"><font color="red">MAX RPM / AUTO</font></span></label>
+      <input name="checkbox-TAXI-5" id="checkbox-TAXI-5" type="checkbox">
+      <label for="checkbox-TAXI-5">ANTI- / DEICE / WX RADAR<span style="float:right"><font color="red">TESTED</font></span></label>
+      <input name="checkbox-TAXI-6" id="checkbox-TAXI-6" type="checkbox">
+      <label for="checkbox-TAXI-6"> T/O CONFIG<span style="float:right"><font color="red">TESTED</font></span></label>
+      <input name="checkbox-TAXI-7" id="checkbox-TAXI-7" type="checkbox">
+      <label for="checkbox-TAXI-7">ADU<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-TAXI-8" id="checkbox-TAXI-8" type="checkbox">
+      <label for="checkbox-TAXI-8">OVERBOARD VALVE<span style="float:right"><font color="red">AUTO</font></span></label>
+      <input name="checkbox-TAXI-9" id="checkbox-TAXI-9" type="checkbox">
+      <label for="checkbox-TAXI-9">CABIN REPORT FOR T/O<span style="float:right"><font color="red">RECEIVED</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--BEFORE TAKE OFF page -->
+<div id="BEFORE_TAKE_OFF" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">BEFORE TAKE OFF</legend>
+      <input name="checkbox-BEFORE_TAKE_OFF-1" id="checkbox-BEFORE_TAKE_OFF-1" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-1"> XPDR<span style="float:right"><font color="red">Alt</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-2" id="checkbox-BEFORE_TAKE_OFF-2" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-2">CCAS<span style="float:right"><font color="red">recall / T/O inhi</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-3" id="checkbox-BEFORE_TAKE_OFF-3" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-3">External Lights<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-4" id="checkbox-BEFORE_TAKE_OFF-4" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-4">Engine Start Selector<span style="float:right"><font color="red">cont relight (if avail.)</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-5" id="checkbox-BEFORE_TAKE_OFF-5" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-5">T/O REVIEW<span style="float:right"><font color="red">PERFORMED</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-6" id="checkbox-BEFORE_TAKE_OFF-6" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-6"> FLIGHT CONTROLS<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-7" id="checkbox-BEFORE_TAKE_OFF-7" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-7">ANTI- / DEICE<span style="float:right"><font color="red">AS REQUIRED</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-8" id="checkbox-BEFORE_TAKE_OFF-8" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-8">BLEED VALVES<span style="float:right"><font color="red">AS REQUIRED</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-9" id="checkbox-BEFORE_TAKE_OFF-9" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-9">FLIGHT INSTRUMENTS<span style="float:right"><font color="red">___FLAGS / ___WARNINGS</font></span></label>
+      <input name="checkbox-BEFORE_TAKE_OFF-10" id="checkbox-BEFORE_TAKE_OFF-10" type="checkbox">
+      <label for="checkbox-BEFORE_TAKE_OFF-10">HEADING<span style="float:right"><font color="red">___</font></span></label>
+	  </fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+
+<!--AFTER TAKE OFF page -->
+<div id="AFTER_TAKE_OFF" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">AFTER TAKE OFF</legend>
+      <input name="checkbox-AFTER_TAKE_OFF-1" id="checkbox-AFTER_TAKE_OFF-1" type="checkbox">
+      <label for="checkbox-AFTER_TAKE_OFF-1"> Landing Gear<span style="float:right"><font color="red">UP</font></span></label>
+      <input name="checkbox-AFTER_TAKE_OFF-2" id="checkbox-AFTER_TAKE_OFF-2" type="checkbox">
+      <label for="checkbox-AFTER_TAKE_OFF-2">Flaps<span style="float:right"><font color="red">set / indicating 0</font></span></label>
+      <input name="checkbox-AFTER_TAKE_OFF-3" id="checkbox-AFTER_TAKE_OFF-3" type="checkbox">
+      <label for="checkbox-AFTER_TAKE_OFF-3">PWR Management<span style="float:right"><font color="red">CLB</font></span></label>
+      <input name="checkbox-AFTER_TAKE_OFF-4" id="checkbox-AFTER_TAKE_OFF-4" type="checkbox">
+      <label for="checkbox-AFTER_TAKE_OFF-4">Bleed Valves<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-AFTER_TAKE_OFF-5" id="checkbox-AFTER_TAKE_OFF-5" type="checkbox">
+      <label for="checkbox-AFTER_TAKE_OFF-5">Engine Start Selector<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-AFTER_TAKE_OFF-6" id="checkbox-AFTER_TAKE_OFF-6" type="checkbox">
+      <label for="checkbox-AFTER_TAKE_OFF-6"> No Smoking Signs<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-AFTER_TAKE_OFF-7" id="checkbox-AFTER_TAKE_OFF-7" type="checkbox">
+      <label for="checkbox-AFTER_TAKE_OFF-7">ALTIMETERS<span style="float:right"><font color="red">____hPa /____FT</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+
+<!--DESCENT page -->
+<div id="DESCENT" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">DESCENT</legend>
+      <input name="checkbox-DESCENT-1" id="checkbox-DESCENT-1" type="checkbox">
+      <label for="checkbox-DESCENT-1">Seat Belt Sign<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-DESCENT-2" id="checkbox-DESCENT-2" type="checkbox">
+      <label for="checkbox-DESCENT-2">CCAS<span style="float:right"><font color="red">recall</font></span></label>
+      <input name="checkbox-DESCENT-3" id="checkbox-DESCENT-3" type="checkbox">
+      <label for="checkbox-DESCENT-3">Landing Elevation<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-DESCENT-4" id="checkbox-DESCENT-4" type="checkbox">
+      <label for="checkbox-DESCENT-4">SPEED MARKS<span style="float:right"><font color="red">ET /___t___COND</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+
+<!--APPROACH page -->
+<div id="APPROACH" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">APPROACH</legend>
+      <input name="checkbox-APPROACH-1" id="checkbox-APPROACH-1" type="checkbox">
+      <label for="checkbox-APPROACH-1">Cabin Altitude<span style="float:right"><font color="red">checked</font></span></label>
+      <input name="checkbox-APPROACH-2" id="checkbox-APPROACH-2" type="checkbox">
+      <label for="checkbox-APPROACH-2">Cabin Signs<span style="float:right"><font color="red">both on</font></span></label>
+      <input name="checkbox-APPROACH-3" id="checkbox-APPROACH-3" type="checkbox">
+      <label for="checkbox-APPROACH-3">APPROACH BRIEFING<span style="float:right"><font color="red">PERFORMED</font></span></label>
+      <input name="checkbox-APPROACH-4" id="checkbox-APPROACH-4" type="checkbox">
+      <label for="checkbox-APPROACH-4">___APP<span style="float:right"><font color="red">RWY___</font></span></label>
+      <input name="checkbox-APPROACH-5" id="checkbox-APPROACH-5" type="checkbox">
+      <label for="checkbox-APPROACH-5">TORQUE BUGS<span style="float:right"><font color="red">___hPa /___FT</font></span></label>
+      <input name="checkbox-APPROACH-6" id="checkbox-APPROACH-6" type="checkbox">
+      <label for="checkbox-APPROACH-6"> ALTIMETERS<span style="float:right"><font color="red">BOTH</font></span></label>
+      <input name="checkbox-APPROACH-7" id="checkbox-APPROACH-7" type="checkbox">
+      <label for="checkbox-APPROACH-7">SPEED BUG<span style="float:right"><font color="red">SET /___KTS</font></span></label>
+      <input name="checkbox-APPROACH-8" id="checkbox-APPROACH-8" type="checkbox">
+      <label for="checkbox-APPROACH-8">ANTI- / DEICE<span style="float:right"><font color="red">ON / OFF</font></span></label>
+	  </fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+
+<!--FINAL page -->
+<div id="FINAL" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">FINAL</legend>
+      <input name="checkbox-FINAL-1" id="checkbox-FINAL-1" type="checkbox">
+      <label for="checkbox-FINAL-1">External Lightse<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-FINAL-2" id="checkbox-FINAL-2" type="checkbox">
+      <label for="checkbox-FINAL-2">Engine Start Selector<span style="float:right"><font color="red">cont relight (if avail.)</font></span></label>
+      <input name="checkbox-FINAL-3" id="checkbox-FINAL-3" type="checkbox">
+      <label for="checkbox-FINAL-3">CABIN REPORT FOR LANDING<span style="float:right"><font color="red">RECEIVED</font></span></label>
+      <input name="checkbox-FINAL-4" id="checkbox-FINAL-4" type="checkbox">
+      <label for="checkbox-FINAL-4">LANDING GEAR<span style="float:right"><font color="red">DOWN / 3 GREEN</font></span></label>
+      <input name="checkbox-FINAL-5" id="checkbox-FINAL-5" type="checkbox">
+      <label for="checkbox-FINAL-5">PWR MANAGEMENT<span style="float:right"><font color="red">T/O</font></span></label>
+      <input name="checkbox-FINAL-6" id="checkbox-FINAL-6" type="checkbox">
+      <label for="checkbox-FINAL-6">FLAPS<span style="float:right"><font color="red">SET / INDICATING 30/35</font></span></label>
+      <input name="checkbox-FINAL-7" id="checkbox-FINAL-7" type="checkbox">
+      <label for="checkbox-FINAL-7">TLU<span style="float:right"><font color="red">LOW SPEED</font></span></label>
+      <input name="checkbox-FINAL-8" id="checkbox-FINAL-8" type="checkbox">
+      <label for="checkbox-FINAL-8">COND LEVERS<span style="float:right"><font color="red">AS REQUIRED</font></span></label>
+	  </fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--AFTER LANFING page -->
+<div id="AFTER_LANDING" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">AFTER LANDING</legend>
+      <input name="checkbox-AFTER_LANDING-1" id="checkbox-AFTER_LANDING-1" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-1">Gust Lock<span style="float:right"><font color="red">ENGAGED</font></span></label>
+      <input name="checkbox-AFTER_LANDING-2" id="checkbox-AFTER_LANDING-2" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-2">XPDR<span style="float:right"><font color="red">stby</font></span></label>
+      <input name="checkbox-AFTER_LANDING-3" id="checkbox-AFTER_LANDING-3" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-3">Flaps<span style="float:right"><font color="red">set / indicating 0</font></span></label>
+      <input name="checkbox-AFTER_LANDING-4" id="checkbox-AFTER_LANDING-4" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-4">Radar Altitude<span style="float:right"><font color="red">set 0</font></span></label>
+      <input name="checkbox-AFTER_LANDING-5" id="checkbox-AFTER_LANDING-5" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-5">Trims<span style="float:right"><font color="red">reset</font></span></label>
+      <input name="checkbox-AFTER_LANDING-6" id="checkbox-AFTER_LANDING-6" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-6">External Lights<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-AFTER_LANDING-7" id="checkbox-AFTER_LANDING-7" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-7">Engine Start Selector<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-AFTER_LANDING-8" id="checkbox-AFTER_LANDING-8" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-8">Anti- / Deice<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-AFTER_LANDING-9" id="checkbox-AFTER_LANDING-9" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-9">Stby Probe Heating<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-AFTER_LANDING-10" id="checkbox-AFTER_LANDING-10" type="checkbox">
+      <label for="checkbox-AFTER_LANDING-10">WX RADAR<span style="float:right"><font color="red">SET STBY</font></span></label>
+	  </fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--PARKING CHECKLIST page -->
+<div id="PARKING_CHECKLIST" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">PARKING CHECKLIST</legend>
+      <input name="checkbox-PARKING_CHECKLIST-1" id="checkbox-PARKING_CHECKLIST-1" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-1">PARKING BRAKE / PRESS<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-PARKING_CHECKLIST-2" id="checkbox-PARKING_CHECKLIST-2" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-2">H - Mode<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-PARKING_CHECKLIST-3" id="checkbox-PARKING_CHECKLIST-3" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-3">Beacon / Wing Light<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-PARKING_CHECKLIST-4" id="checkbox-PARKING_CHECKLIST-4" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-4">Seat Belt Sign<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-PARKING_CHECKLIST-5" id="checkbox-PARKING_CHECKLIST-5" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-5">Emerg Exit Light<span style="float:right"><font color="red">disarmed</font></span></label>
+      <input name="checkbox-PARKING_CHECKLIST-6" id="checkbox-PARKING_CHECKLIST-6" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-6">External Power<span style="float:right"><font color="red">checked / on</font></span></label>
+      <input name="checkbox-PARKING_CHECKLIST-7" id="checkbox-PARKING_CHECKLIST-7" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-7">H – Mode / Fuel Pumps<span style="float:right"><font color="red">FSO / off</font></span></label>
+      <input name="checkbox-PARKING_CHECKLIST-8" id="checkbox-PARKING_CHECKLIST-8" type="checkbox">
+      <label for="checkbox-PARKING_CHECKLIST-8">Fuel Used<span style="float:right"><font color="red">set 0</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--SECURING page -->
+<div id="SECURING" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">SECURING</legend>
+      <input name="checkbox-SECURING-1" id="checkbox-SECURING-1" type="checkbox">
+      <label for="checkbox-SECURING-1">Oxygen Main Supply<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-2" id="checkbox-SECURING-2" type="checkbox">
+      <label for="checkbox-SECURING-2">Probe / Windshield Heating<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-3" id="checkbox-SECURING-3" type="checkbox">
+      <label for="checkbox-SECURING-3">NAV / EFIS / Radar<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-4" id="checkbox-SECURING-4" type="checkbox">
+      <label for="checkbox-SECURING-4">COM 2 / ADF / XPDR<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-5" id="checkbox-SECURING-5" type="checkbox">
+      <label for="checkbox-SECURING-5">Min Cabin Light<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-6" id="checkbox-SECURING-6" type="checkbox">
+      <label for="checkbox-SECURING-6">Cabin Signs<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-7" id="checkbox-SECURING-7" type="checkbox">
+      <label for="checkbox-SECURING-7">Fuel Used<span style="float:right"><font color="red">set 0</font></span></label>
+      <input name="checkbox-SECURING-8" id="checkbox-SECURING-8" type="checkbox">
+      <label for="checkbox-SECURING-8">H – Mode / Fuel Pumps<span style="float:right"><font color="red">FSO / off</font></span></label>
+      <input name="checkbox-SECURING-9" id="checkbox-SECURING-9" type="checkbox">
+      <label for="checkbox-SECURING-9">COM 1<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-10" id="checkbox-SECURING-10" type="checkbox">
+      <label for="checkbox-SECURING-10">External Lights<span style="float:right"><font color="red">OFF`</font></span></label>
+      <input name="checkbox-SECURING-11" id="checkbox-SECURING-11" type="checkbox">
+      <label for="checkbox-SECURING-11">External Power PB<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-SECURING-12" id="checkbox-SECURING-12" type="checkbox">
+      <label for="checkbox-SECURING-12">Battery Switch<span style="float:right"><font color="red">OFF</font></span></label>
+	</fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+<!--BEFORE FIRST FLIGHT OF THE DAY -->
+<div id="BEFORE_FIRST_FLIGHT_OF_THE_DAY" data-role="page">
+  <div data-role="header" data-position="fixed" data-theme="b">
+    <h3>CheckList</h3>
+    <a class="ui-btn ui-btn-left" style="-webkit-border-radius:20px;" href="#home" data-transition="slide" data-direction="reverse">Back</a>
+  </div>
+  <div role="main" class="ui-content">
+    <fieldset data-role="controlgroup" data-type="vertical">
+      <legend style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;">BEFORE FIRST FLIGHT OF THE DAY</legend>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-1" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-1" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-1">Parking Brake / Press<span style="float:right"><font color="red">SET / CHECKED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-2" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-2" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-2">MFC<span style="float:right"><font color="red">TESTED / ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-3" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-3" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-3">External Power<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-4" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-4" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-4">Circuit Breakers<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-5" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-5" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-5">Battery Switch<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-6" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-6" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-6">Cockpit Lights<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-7" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-7" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-7">Flt Data / CVR<span style="float:right"><font color="red">SET / ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-8" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-8" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-8">Trims<span style="float:right"><font color="red">CHECKED / SET</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-9" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-9" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-9">Engine Test<span style="float:right"><font color="red">PERFORMED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-10" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-10" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-10">COM / ADF / XPDR<span style="float:right"><font color="red">ON / STBY</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-11" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-11" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-11">Emerg Audio Cancel<span style="float:right"><font color="red">GUARDED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-12" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-12" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-12">Idle Gate<span style="float:right"><font color="red">PULLED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-13" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-13" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-13">Engine Levers<span style="float:right"><font color="red">SET GI / FSO</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-14" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-14" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-14">Gust Lock<span style="float:right"><font color="red">engaged</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-15" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-15" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-15">Flaps<span style="float:right"><font color="red">Checked 0</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-16" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-16" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-16">EFIS / WX Radar<span style="float:right"><font color="red">on / stby</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-17" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-17" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-17">TAS / TAT<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-18" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-18" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-18">Crew Alerting Panel<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-19" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-19" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-19">PWR Management<span style="float:right"><font color="red">SET to T/O</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-20" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-20" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-20">Engine Instruments<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-21" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-21" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-21">Landing Gear<span style="float:right"><font color="red">Down / 6 Green</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-22" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-22" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-22">Pressure Control<span style="float:right"><font color="red">Checked / set</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-23" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-23" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-23">LDG Elevation<span style="float:right"><font color="red">SET</span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-24" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-24" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-24">All Test P/B<span style="float:right"><font color="red">Tested</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-25" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-25" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-25">FD Switches<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-26" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-26" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-26">NAVs<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-27" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-27" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-27">Air Bleed / Temp Sel<span style="float:right"><font color="red">Set</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-28" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-28" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-28">ANN Lights<span style="float:right"><font color="red">TESTED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-29" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-29" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-29">Avionic Vent<span style="float:right"><font color="red">as required</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-30" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-30" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-30">Main Oxygen<span style="float:right"><font color="red">on / checked</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-31" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-31" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-31">Fans<span style="float:right"><font color="red">normal</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-32" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-32" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-32">Engine Fire 1+2<span style="float:right"><font color="red">TESTED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-33" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-33" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-33">Emerg Exit Lights<span style="float:right"><font color="red">As required</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-34" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-34" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-34">Anti- / De Icing<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-35" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-35" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-35">Probes / Windshield Heating<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-36" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-36" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-36">ACW / Hydraulic<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-37" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-37" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-37">Emerg Loc Xmtr<span style="float:right"><font color="red">auto / guarded</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-38" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-38" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-38">External Lights<span style="float:right"><font color="red">SET</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-39" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-39" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-39">Prop Brake<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-40" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-40" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-40">Eng Start Selector<span style="float:right"><font color="red">OFF</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-41" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-41" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-41">Min Cabin Light<span style="float:right"><font color="red">ON</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-42" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-42" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-42">Fuel Panel<span style="float:right"><font color="red">tested</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-43>" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-43" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-43">Doors Panel<span style="float:right"><font color="red">checked</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-44" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-44" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-44">TLU Switch<span style="float:right"><font color="red">auto / guarded</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-45" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-45" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-45">RH Maintenance Panel<span style="float:right"><font color="red">closed</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-46" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-46" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-46">PREFLIGHT INSPECTION<span style="float:right"><font color="red">COMPLETED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-47" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-47" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-47">DOCUMENTS<span style="float:right"><font color="red">CHECKED / ON BOARD</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-48" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-48" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-48">EMERGENCY EQUIPMENT<span style="float:right"><font color="red">CHECKED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-49" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-49" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-49">GEAR PINS<span style="float:right"><font color="red">STOWED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-50" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-50" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-50">STICK PUSHER TEST<span style="float:right"><font color="red">PERFORMED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-51" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-51" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-51">LH MAINTENANCE PANEL<span style="float:right"><font color="red">NORMAL FLIGHT</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-52" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-52" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-52">NOSE WHEEL STEERING<span style="float:right"><font color="red">ON / GUARDED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-53" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-53" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-53">OXYGEN MASKS<span style="float:right"><font color="red">CHECKED / SET 100%</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-54" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-54" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-54">CPT / FO SWITCHING<span style="float:right"><font color="red">PERFORMED / NORMAL</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-55" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-55" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-55">GPWS SWITCH<span style="float:right"><font color="red">NORMAL / GUARDED</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-56" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-56" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-56">AUDIO SELECT<span style="float:right"><font color="red">NORMAL</font></span></label>
+      <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-57" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-57" type="checkbox">
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-57">CLOCKS<span style="float:right"><font color="red">SET</font></span></label>
+	  <input name="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-58" id="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-58" type="checkbox">      
+      <label for="checkbox-BEFORE_FIRS_FLIGHT_OF_THE_DAY-58">FLIGHT INSTRUMENTS<span style="float:right"><font color="red">CHECKED</font></span></label>
+	  </fieldset>
+  </div>
+   <a class="ui-btn ui-btn-center" style="-webkit-border-radius:20px;" href="#home"data-transition="slide" data-direction="reverse">Save & Back</a>
+</div>
+
+
+</body>
+
+</html> 
+
