@@ -27,10 +27,30 @@
 
     });
   </script>
-  <title>ATR72 Checklist</title>
+
+<script>
+$(function() {
+  setTimeout(hideSplash, 2000);
+});
+
+function hideSplash() {
+  $.mobile.changePage("#home", "fade");
+}
+  
+</script>
+  
+<title>ATR72 Checklist</title>
 </head><!-- script finish -->
 
 <body>
+	
+
+<div data-role="page" data-theme="b" id="splash" style="background-color: #fff;"> 
+    <div class="splash">
+        <img src="https://cloud.githubusercontent.com/assets/5377283/7222102/6e1873dc-e6d4-11e4-817e-a6ded7d738a7.jpg" alt="splash" />
+    </div>
+</div>
+	
 <div id="home" data-role="page" style="background: url(https://cloud.githubusercontent.com/assets/5377283/7222102/6e1873dc-e6d4-11e4-817e-a6ded7d738a7.jpg) -100px 90px / 125% repeat repeat fixed;">
   <div data-role="header" data-position="fixed" data-theme="a">
     <h3>ATR 72 Checklist</h3>
